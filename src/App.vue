@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Layout from './submodules/base_layout/src/components/interface.vue';
+/*import Layout from './submodules/base_layout/src/components/interface.vue';
 import queue from './submodules/queue/src/App.vue';
 
 export default {
@@ -14,7 +14,7 @@ export default {
   components: {
     Layout
   }
-}
+}*/
 </script>
 
 <style>

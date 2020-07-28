@@ -15,7 +15,7 @@ export default {
     Layout
   }
 }*/
-</script>
+</script> 
 
 <style>
 #app {

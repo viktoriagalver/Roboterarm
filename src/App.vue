@@ -1,22 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Layout streamUrl="http://192.168.1.25:8080/stream.mjpg">
+      <template v-slot:videocomponent></template>
+      <template v-slot:controlcomponent>
+        <Controls></Controls>
+      </template>
+      <template v-slot:queuecomponent>
+        <Queue></Queue>
+      </template>
+    </Layout>
   </div>
 </template>
 
 <script>
-/*
+
 import Layout from './submodules/base_layout/src/components/interface.vue';
-import queue from './submodules/queue/src/App.vue';
+import Controls from './components/controls.vue';
+import Queue from './submodules/queue/src/App.vue';
 
 export default {
   name: 'App',
   components: {
-    Layout
-  }
-}
-*/
+    Layout,
+    Controls,
+    Queue,
+  },
+};
 </script>
 
 <style>

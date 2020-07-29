@@ -16,7 +16,7 @@
 
 import Layout from './submodules/base_layout/src/components/interface.vue';
 import Controls from './components/controls.vue';
-import Queue from './submodules/queue/src/App.vue';
+import Queue from './components/queue.vue';
 
 export default {
   name: 'App',

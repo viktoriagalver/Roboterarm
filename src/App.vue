@@ -21,19 +21,12 @@ import Queue from './components/queue.vue';
 export default {
   name: 'App',
   components: {
-<<<<<<< HEAD
-    Layout
-  }
-}*/
-</script> 
-=======
     Layout,
     Controls,
     Queue,
   },
 };
 </script>
->>>>>>> dev
 
 <style>
 #app {

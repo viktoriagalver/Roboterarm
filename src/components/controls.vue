@@ -55,11 +55,17 @@ export default {
     };
   },
   methods: {
-    up() {
-      this.$socket.emit('control-up', 10);
+    up1() {
+      this.$socket.emit('control-up1', 10);
     },
-    down() {
-      this.$socket.emit('control-down', -10);
+    up2() {
+      this.$socket.emit('control-up2', 10);
+    },
+    down1() {
+      this.$socket.emit('control-down1', -10);
+    },
+    down2() {
+      this.$socket.emit('control-down2', -10);
     },
     left() {
       this.$socket.emit('control-left', 10);
@@ -72,26 +78,20 @@ export default {
     },
     keyDown(e) {
       if (e.code === 'ArrowUp') {
-        this.go();
-      } else if (e.code === 'KeyW') {
-        this.go();
+        this.up1();
+      } else if (e.code === 'ArrowUp1') {
+        this.up2();
+      } else if (e.code === 'ArrowUp2') {
+        this.down1();
+      } else if (e.code === 'ArrowDown1') {
+        this.down2();
+      } else if (e.code === 'ArrowDown2') {
+        this.left();
       } else if (e.code === 'ArrowLeft') {
-        this.turnLeft();
-      } else if (e.code === 'KeyA') {
-        this.turnLeft();
+        this.right();
       } else if (e.code === 'ArrowRight') {
-        this.turnRight();
-      } else if (e.code === 'KeyD') {
-        this.turnRight();
-      } else if (e.code === 'ArrowDown') {
-        this.back();
-      } else if (e.code === 'KeyS') {
-        this.back();
-      } else if (e.code === 'Space') {
-        this.stop();
-      }
       // do stuff
-    },
+    }
   },
   sockets: {
     connect() {
@@ -119,13 +119,8 @@ export default {
       console.log(data);
     });
   },
-  created() {
-    window.addEventListener('keydown', this.keyDown);
-  },
-  destroyed() {
-    window.removeEventListener('keydown', this.keyDown);
-  },
-};
+},
+}
 </script>
 
 <style>

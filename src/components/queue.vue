@@ -43,11 +43,9 @@ export default {
     margin-right: auto;
     margin-top: 10px;
   }
-
   #queue .container div.isYou {
     border-left: 20px solid hotpink;
   }
-
   #queue .container div.isActive {
     background-color: rgb(145, 64, 64);
   }

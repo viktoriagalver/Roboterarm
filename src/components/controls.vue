@@ -5,37 +5,37 @@
       :disabled="!connected || !$store.getters.amIActive" v-on:click="up1()">
       Servo 1
       <br>
-      W / <b-icon icon="arrow-up-square"></b-icon>
+      Up <b-icon icon="arrow-up-square"></b-icon>
     </b-button>
     <b-button class="buttons"
       :disabled="!connected || !$store.getters.amIActive" v-on:click="down1()">
       Servo 1
       <br>
-      S / <b-icon icon="arrow-down-square"></b-icon>
+      Down <b-icon icon="arrow-down-square"></b-icon>
     </b-button>
     <b-button class="buttons"
       :disabled="!connected || !$store.getters.amIActive" v-on:click="up2()">
       Servo 2
       <br>
-      E / <b-icon icon="arrow-up-square"></b-icon>
+      Up <b-icon icon="arrow-up-square"></b-icon>
     </b-button>
     <b-button class="buttons"
       :disabled="!connected || !$store.getters.amIActive" v-on:click="down2()">
       Servo 2
       <br>
-      D / <b-icon icon="arrow-down-square"></b-icon>
+      Down <b-icon icon="arrow-down-square"></b-icon>
     </b-button>
     <b-button class="buttons"
       :disabled="!connected || !$store.getters.amIActive" v-on:click="left()">
       Stepper
       <br>
-      Y / <b-icon icon="arrow-left-square"></b-icon>
+      Left <b-icon icon="arrow-left-square"></b-icon>
     </b-button>
     <b-button class="buttons"
       :disabled="!connected || !$store.getters.amIActive" v-on:click="right()">
       Stepper
       <br>
-      X / <b-icon icon="arrow-right-square"></b-icon>
+      Right <b-icon icon="arrow-right-square"></b-icon>
     </b-button>
     <br>
     <b-button class="buttons"

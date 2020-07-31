@@ -2,37 +2,37 @@
   <div>
     <div>Status: {{connectedMsg}}</div>
     <b-button class="buttons"
-      :disabled="!connected || !$store.getters.amIActive" v-on:click="go()">
+      :disabled="!connected || !$store.getters.amIActive" v-on:click="up1()">
       Servo 1
       <br>
       Up <b-icon icon="arrow-up-square"></b-icon>
     </b-button>
     <b-button class="buttons"
-      :disabled="!connected || !$store.getters.amIActive" v-on:click="back()">
+      :disabled="!connected || !$store.getters.amIActive" v-on:click="down1()">
       Servo 1
       <br>
       Down <b-icon icon="arrow-down-square"></b-icon>
     </b-button>
     <b-button class="buttons"
-      :disabled="!connected || !$store.getters.amIActive" v-on:click="turnLeft()">
+      :disabled="!connected || !$store.getters.amIActive" v-on:click="up2()">
       Servo 2
       <br>
       Up <b-icon icon="arrow-up-square"></b-icon>
     </b-button>
     <b-button class="buttons"
-      :disabled="!connected || !$store.getters.amIActive" v-on:click="turnRight()">
+      :disabled="!connected || !$store.getters.amIActive" v-on:click="down2()">
       Servo 2
       <br>
       Down <b-icon icon="arrow-down-square"></b-icon>
     </b-button>
     <b-button class="buttons"
-      :disabled="!connected || !$store.getters.amIActive" v-on:click="stop()">
+      :disabled="!connected || !$store.getters.amIActive" v-on:click="left()">
       Stepper
       <br>
       Left <b-icon icon="arrow-left-square"></b-icon>
     </b-button>
     <b-button class="buttons"
-      :disabled="!connected || !$store.getters.amIActive" v-on:click="stop()">
+      :disabled="!connected || !$store.getters.amIActive" v-on:click="right()">
       Stepper
       <br>
       Right <b-icon icon="arrow-right-square"></b-icon>
@@ -56,22 +56,22 @@ export default {
   },
   methods: {
     up1() {
-      this.$socket.emit('control-up1', 10);
+      this.$socket.emit('control-up1', 1);
     },
     up2() {
-      this.$socket.emit('control-up2', 10);
+      this.$socket.emit('control-up2', 1);
     },
     down1() {
-      this.$socket.emit('control-down1', -10);
+      this.$socket.emit('control-down1', -1);
     },
     down2() {
-      this.$socket.emit('control-down2', -10);
+      this.$socket.emit('control-down2', -1);
     },
     left() {
-      this.$socket.emit('control-left', 10);
+      this.$socket.emit('control-left', 1);
     },
     right() {
-      this.$socket.emit('control-right', 100);
+      this.$socket.emit('control-right', -1);
     },
     shutdown() {
       this.$socket.emit('system', 'shutdown');

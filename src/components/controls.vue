@@ -91,10 +91,11 @@ export default {
         this.right();
       } else if (e.code === 'KeyX') {
       // do stuff
-    }
+      }
+    },
   },
   sockets: {
-    connect() {
+    connect: function() {
       // eslint-disable-next-line no-console
       console.log('socket connected');
       this.connectedMsg = 'Connected';
@@ -102,7 +103,7 @@ export default {
       this.$store.state.ownId = this.$socket.id;
       this.$socket.emit('register_front');
     },
-    disconnect() {
+    disconnect: function() {
       // eslint-disable-next-line no-console
       console.log('socket disconnected');
       this.connected = false;
@@ -119,7 +120,6 @@ export default {
       console.log(data);
     });
   },
-},
 }
 </script>
 
